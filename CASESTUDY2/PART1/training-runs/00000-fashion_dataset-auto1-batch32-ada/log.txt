@@ -1,0 +1,54 @@
+Loading training set...
+C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\utils\data\sampler.py:64: UserWarning: `data_source` argument is not used and will be removed in 2.2.0.You may still have custom implementation that utilizes it.
+  warnings.warn("`data_source` argument is not used and will be removed in 2.2.0."
+
+Num images:  2906
+Image shape: [3, 1024, 1024]
+Label shape: [0]
+
+Constructing networks...
+Traceback (most recent call last):
+  File "C:\Users\ashsi\OneDrive\Desktop\iitguwahaticase2\stylegan2-ada-pytorch\train.py", line 538, in <module>
+    main() # pylint: disable=no-value-for-parameter
+    ^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\click\decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\OneDrive\Desktop\iitguwahaticase2\stylegan2-ada-pytorch\train.py", line 531, in main
+    subprocess_fn(rank=0, args=args, temp_dir=temp_dir)
+  File "C:\Users\ashsi\OneDrive\Desktop\iitguwahaticase2\stylegan2-ada-pytorch\train.py", line 383, in subprocess_fn
+    training_loop.training_loop(rank=rank, **args)
+  File "C:\Users\ashsi\OneDrive\Desktop\iitguwahaticase2\stylegan2-ada-pytorch\training\training_loop.py", line 150, in training_loop
+    G = dnnlib.util.construct_class_by_name(**G_kwargs, **common_kwargs).train().requires_grad_(False).to(device) # subclass of torch.nn.Module
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 1173, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 779, in _apply
+    module._apply(fn)
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 779, in _apply
+    module._apply(fn)
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 779, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 804, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\nn\modules\module.py", line 1159, in convert
+    return t.to(
+           ^^^^^
+  File "C:\Users\ashsi\AppData\Roaming\Python\Python312\site-packages\torch\cuda\__init__.py", line 284, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
